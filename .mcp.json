@@ -1,0 +1,20 @@
+{
+  "name": "jwt-ai-mcp",
+  "description": "MEOK AI Labs \u2014 jwt-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/jwt-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "run"
+  ],
+  "categories": [
+    "Security",
+    "Authentication"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
