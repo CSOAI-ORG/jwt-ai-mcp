@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json, os, re, hashlib, math
 from datetime import datetime, timezone
 from typing import Optional
@@ -18,40 +23,56 @@ mcp = FastMCP("jwt-ai", instructions="MEOK AI Labs — JWT token operations — 
 
 
 @mcp.tool()
-def decode_jwt(token: str) -> str:
+def decode_jwt(token: str, api_key: str = "") -> str:
     """Decode a JWT token and show header, payload, signature."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "decode_jwt", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     import base64
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def validate_jwt(token: str, secret: str = '') -> str:
+def validate_jwt(token: str, secret: str = '', api_key: str = "") -> str:
     """Validate JWT signature and expiration."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "validate_jwt", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def generate_jwt(payload: str, secret: str, algorithm: str = 'HS256') -> str:
+def generate_jwt(payload: str, secret: str, algorithm: str = 'HS256', api_key: str = "") -> str:
     """Generate a signed JWT token."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "generate_jwt", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def inspect_claims(token: str) -> str:
+def inspect_claims(token: str, api_key: str = "") -> str:
     """Inspect JWT claims — issuer, audience, expiration, custom claims."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "inspect_claims", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 
 if __name__ == "__main__":

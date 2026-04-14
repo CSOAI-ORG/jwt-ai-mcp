@@ -1,10 +1,37 @@
 name: jwt-ai-mcp
-description: "MEOK AI Labs — jwt-ai-mcp"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/jwt-ai-mcp
-license: MIT
-categories: [Security, Authentication]
-tags: [jwt, json-web-token, authentication, token-management, oauth]
-runtime: python
-entrypoint: server.py
+description: "jwt-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+version: 1.0.0
+tools:
+- name: decode_jwt
+  description: Decode a JWT token and show header, payload, signature.
+  parameters:
+  - name: token
+    type: string
+    required: true
+- name: validate_jwt
+  description: Validate JWT signature and expiration.
+  parameters:
+  - name: token
+    type: string
+    required: true
+  - name: secret
+    type: string
+    required: false
+- name: generate_jwt
+  description: Generate a signed JWT token.
+  parameters:
+  - name: payload
+    type: string
+    required: true
+  - name: secret
+    type: string
+    required: true
+  - name: algorithm
+    type: string
+    required: false
+- name: inspect_claims
+  description: "Inspect JWT claims \u2014 issuer, audience, expiration, custom claims."
+  parameters:
+  - name: token
+    type: string
+    required: true

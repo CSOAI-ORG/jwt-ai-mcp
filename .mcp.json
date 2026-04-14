@@ -1,20 +1,77 @@
 {
   "name": "jwt-ai-mcp",
-  "description": "MEOK AI Labs \u2014 jwt-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/jwt-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "jwt-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Security",
-    "Authentication"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "decode_jwt",
+      "description": "Decode a JWT token and show header, payload, signature.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      }
+    },
+    {
+      "name": "validate_jwt",
+      "description": "Validate JWT signature and expiration.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "secret": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      }
+    },
+    {
+      "name": "generate_jwt",
+      "description": "Generate a signed JWT token.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "type": "string"
+          },
+          "secret": {
+            "type": "string"
+          },
+          "algorithm": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "payload",
+          "secret"
+        ]
+      }
+    },
+    {
+      "name": "inspect_claims",
+      "description": "Inspect JWT claims \u2014 issuer, audience, expiration, custom claims.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      }
+    }
+  ]
 }
