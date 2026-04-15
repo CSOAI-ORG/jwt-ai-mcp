@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/jwt-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+jwt_ai_mcp = "server:main"
