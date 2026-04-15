@@ -1,0 +1,58 @@
+{
+  "name": "jwt-ai",
+  "description": "MEOK AI Labs \u2014 JWT token operations \u2014 decode, validate, generate, inspect.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/jwt-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "decode_jwt",
+      "description": "Decode a JWT token and show header, payload, signature."
+    },
+    {
+      "name": "validate_jwt",
+      "description": "Validate JWT signature and expiration."
+    },
+    {
+      "name": "generate_jwt",
+      "description": "Generate a signed JWT token."
+    },
+    {
+      "name": "inspect_claims",
+      "description": "Inspect JWT claims \u2014 issuer, audience, expiration, custom claims."
+    },
+    {
+      "name": "verify_expiration",
+      "description": "Check if JWT token is expired or still valid."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Blockchain & Web3",
+    "Developer Tools"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
