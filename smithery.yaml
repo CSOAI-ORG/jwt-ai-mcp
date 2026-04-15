@@ -1,5 +1,6 @@
 name: jwt-ai-mcp
-description: "jwt-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+description: "MEOK AI Labs \u2014 JWT token operations \u2014 decode, validate, generate,\
+  \ inspect."
 version: 1.0.0
 tools:
 - name: decode_jwt
