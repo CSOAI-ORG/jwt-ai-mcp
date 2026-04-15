@@ -1,6 +1,6 @@
 name: jwt-ai-mcp
-description: "MEOK AI Labs \u2014 JWT token operations \u2014 decode, validate, generate,\
-  \ inspect."
+description: 'Jwt Ai MCP server. Tools: decode jwt, validate jwt, generate jwt. Built
+  by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: decode_jwt
@@ -31,7 +31,7 @@ tools:
     type: string
     required: false
 - name: inspect_claims
-  description: "Inspect JWT claims \u2014 issuer, audience, expiration, custom claims."
+  description: Inspect JWT claims — issuer, audience, expiration, custom claims.
   parameters:
   - name: token
     type: string
