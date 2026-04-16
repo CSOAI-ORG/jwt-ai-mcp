@@ -202,7 +202,7 @@ def generate_jwt(
 
     try:
         payload_dict = json.loads(payload) if isinstance(payload, str) else payload
-    except:
+    except Exception as e:
         return {"error": "Invalid payload JSON"}
 
     result = generate_token(payload_dict, secret, algorithm, expires_in)
