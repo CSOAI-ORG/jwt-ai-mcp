@@ -1,73 +1,38 @@
-# Jwt Ai
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — MEOK AI Labs — JWT token operations — decode, validate, generate, inspect.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/jwt-ai-mcp)](https://github.com/CSOAI-ORG/jwt-ai-mcp/stargazers)
 
-JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs.
+# ujwtU aiU mcp
+
+**JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs.**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/jwt-ai-mcp)](https://www.npmjs.com/package/@meok-ai/jwt-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/jwt-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install jwt-ai-mcp
+# or
+npm install -g @meok-ai/jwt-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install jwt-ai-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `decode_jwt`
-Decode a JWT token and show header, payload, signature.
-
-**Parameters:**
-- `token` (str)
-
-### `validate_jwt`
-Validate JWT signature and expiration.
-
-**Parameters:**
-- `token` (str)
-- `secret` (str)
-- `algorithm` (str)
-
-### `generate_jwt`
-Generate a signed JWT token.
-
-**Parameters:**
-- `payload` (str)
-- `secret` (str)
-- `algorithm` (str)
-- `expires_in` (int)
-
-### `inspect_claims`
-Inspect JWT claims — issuer, audience, expiration, custom claims.
-
-**Parameters:**
-- `token` (str)
-
-### `verify_expiration`
-Check if JWT token is expired or still valid.
-
-**Parameters:**
-- `token` (str)
-
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
-
-## Links
-
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/jwt-ai-mcp](https://github.com/CSOAI-ORG/jwt-ai-mcp)
-- **PyPI**: [pypi.org/project/jwt-ai-mcp](https://pypi.org/project/jwt-ai-mcp/)
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
