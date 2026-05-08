@@ -1,45 +1,59 @@
-[![jwt-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/jwt-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/jwt-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/jwt-ai-mcp)](https://pypi.org/project/jwt-ai-mcp/)
-
-[![jwt-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/jwt-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/jwt-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/jwt-ai-mcp)](https://github.com/CSOAI-ORG/jwt-ai-mcp/stargazers)
+# Jwt Ai MCP
 
-# ujwtU aiU mcp
+**MCP server for jwt ai mcp operations**
 
-**JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs.**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/jwt-ai-mcp)](https://www.npmjs.com/package/@meok-ai/jwt-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-jwt-ai-mcp)](https://pypi.org/project/meok-jwt-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/jwt-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Jwt Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `decode_jwt` | Decode a JWT token and show header, payload, signature. |
+| `validate_jwt` | Validate JWT signature and expiration. |
+| `generate_jwt` | Generate a signed JWT token. |
+| `inspect_claims` | Inspect JWT claims — issuer, audience, expiration, custom claims. |
+| `verify_expiration` | Check if JWT token is expired or still valid. |
 
 ## Installation
 
 ```bash
-pip install jwt-ai-mcp
-# or
-npm install -g @meok-ai/jwt-ai-mcp
+pip install meok-jwt-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "jwt-ai-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_jwt_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/jwt-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
