@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs."""
 
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 import json, os, re, hashlib, math, base64, hmac, time
@@ -179,7 +180,7 @@ def decode_jwt(token: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -232,7 +233,7 @@ def validate_jwt(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -304,7 +305,7 @@ def generate_jwt(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -358,7 +359,7 @@ def inspect_claims(token: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -427,7 +428,7 @@ def verify_expiration(token: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if err := _rl():
         return err
@@ -460,5 +461,8 @@ def verify_expiration(token: str, api_key: str = "") -> str:
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
