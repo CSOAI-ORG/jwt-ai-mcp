@@ -1,0 +1,28 @@
+{
+  "name": "jwt-ai-mcp",
+  "title": "Jwt Ai Mcp",
+  "description": "Jwt Ai MCP server. Tools: decode jwt, validate jwt, generate jwt. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "decode_jwt"
+    },
+    {
+      "name": "validate_jwt"
+    },
+    {
+      "name": "generate_jwt"
+    },
+    {
+      "name": "inspect_claims"
+    },
+    {
+      "name": "verify_expiration"
+    }
+  ]
+}

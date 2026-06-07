@@ -1,0 +1,9 @@
+# jwt-ai-mcp - Auto-trigger Rules
+
+When the user asks about jwt, use jwt-ai-mcp tools: decode_jwt, validate_jwt, generate_jwt, inspect_claims, verify_expiration
+
+**MCP server for jwt ai mcp operations**
+
+Install: `pip install jwt-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

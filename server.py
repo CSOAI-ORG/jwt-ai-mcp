@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 JWT token operations — decode, validate, generate, inspect. — MEOK AI Labs."""
 
 import sys, os

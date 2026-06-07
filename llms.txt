@@ -1,32 +1,36 @@
-# Jwt Ai MCP
-
-> MEOK AI Labs — JWT token operations — decode, validate, generate, inspect
-
-`jwt-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# jwt-ai-mcp
+# **MCP server for jwt ai mcp operations**
 
 ## Install
-
 ```bash
 pip install jwt-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx jwt-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `decode_jwt` — Decode a JWT token and show header, payload, signature.
-- `validate_jwt` — Validate JWT signature and expiration.
-- `generate_jwt` — Generate a signed JWT token.
-- `inspect_claims` — Inspect JWT claims — issuer, audience, expiration, custom claims.
-- `verify_expiration` — Check if JWT token is expired or still valid.
+### `decode_jwt`
+Decode a JWT token and show header, payload, signature.
 
-## Links
+### `validate_jwt`
+Validate JWT signature and expiration.
 
-- Source: https://github.com/CSOAI-ORG/jwt-ai-mcp
-- PyPI: https://pypi.org/project/jwt-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `generate_jwt`
+Generate a signed JWT token.
+
+### `inspect_claims`
+Inspect JWT claims — issuer, audience, expiration, custom claims.
+
+### `verify_expiration`
+Check if JWT token is expired or still valid.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
