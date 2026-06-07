@@ -1,0 +1,68 @@
+{
+  "name": "jwt-ai-mcp",
+  "description": "Jwt Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/jwt-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "decode_jwt",
+      "name": "Decode Jwt",
+      "description": "decode_jwt via jwt-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_jwt",
+      "name": "Validate Jwt",
+      "description": "validate_jwt via jwt-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_jwt",
+      "name": "Generate Jwt",
+      "description": "generate_jwt via jwt-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "inspect_claims",
+      "name": "Inspect Claims",
+      "description": "inspect_claims via jwt-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "verify_expiration",
+      "name": "Verify Expiration",
+      "description": "verify_expiration via jwt-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

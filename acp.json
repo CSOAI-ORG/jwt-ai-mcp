@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "jwt-ai-mcp",
+    "description": "Jwt Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "jwt-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "decode_jwt",
+      "validate_jwt",
+      "generate_jwt",
+      "inspect_claims",
+      "verify_expiration"
+    ]
+  }
+}
