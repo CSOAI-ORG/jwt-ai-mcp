@@ -31,8 +31,20 @@ tools:
     type: string
     required: false
 - name: inspect_claims
-  description: Inspect JWT claims — issuer, audience, expiration, custom claims.
+  description: "Inspect JWT claims \u2014 issuer, audience, expiration, custom claims."
   parameters:
   - name: token
     type: string
     required: true
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+    - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: Your MEOK API Key
+  commandFunction: "(config) => ({\n  command: 'uvx',\n  args: ['jwt-ai-mcp', '--api-key',\
+    \ config.apiKey],\n  env: {\n    MEOK_API_KEY: config.apiKey\n  }\n})"
