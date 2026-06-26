@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/jwt-ai-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/jwt-ai-mcp -->
 [![MCP Scorecard: 78/100](https://img.shields.io/badge/proofof.ai-78%2F100-5b21b6)](https://proofof.ai/scorecard/jwt-ai-mcp.html)
 
 # Jwt Ai MCP
